@@ -37,8 +37,8 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @user.errors.each do |error| %>
+        <li><%= error.full_message%></li>
       <% end %>
     </ul>
   </div>
